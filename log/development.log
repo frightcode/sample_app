@@ -4674,3 +4674,25 @@ Processing by SessionsController#new as HTML
   Rendered layouts/_header.html.erb (0.0ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 302ms (Views: 307.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-09-08 19:36:32 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KebOUfehhC/3VfZVbD1tNHRmlMG8l+oBQbQsiiGhx3IKGf/Duo/AEUBnTpsI+oi7NyXI35z4c9YijffexHmvg==", "session"=>{"email"=>"exploit2002@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "exploit2002@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 272ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-09-08 19:36:32 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 482ms (Views: 476.8ms | ActiveRecord: 0.0ms)
