@@ -1,4 +1,10 @@
 <li>
   <%= gravatar_for user, size: 50 %>
   <%= link_to user.name, user %>
+  <%  # If the current user is ADMIN and an object (recieved from the render method)
+  	  # is not a current user (do not add the delete link to yourself!!! :)
+  	  if current_user.admin? && !current_user?(user)  %>
+  | <%= link_to "delete", user, method: "delete",
+  								data: { confirm: "You sure?" } %>
+  <% end %>
 </li>

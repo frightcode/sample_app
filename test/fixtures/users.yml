@@ -11,6 +11,7 @@ daiver:
   name: Rustam Ibragimov
   email: exploit2002@gmail.com
   password_digest: <%= User.digest('atata123___') %>
+  admin: true
 chack:
   name: Chack Norris
   email: chack@norris.com

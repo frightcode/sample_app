@@ -7,6 +7,7 @@ module SessionsHelper
     cookies.permanent[:remember_token] = user.remember_token
   end
 
+  # Check if checkable user is the current user.
   def current_user?(user)
     user == current_user
   end
