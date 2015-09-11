@@ -1,2 +1,0 @@
-class AccountActivatinsController < ApplicationController
-end
