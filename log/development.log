@@ -9044,3 +9044,12 @@ Processing by Rails::MailersController#preview as HTML
 UserMailer#password_reset: processed outbound mail in 127.1ms
   Rendered text template (0.0ms)
 Completed 200 OK in 138ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-13 12:52:24 +1100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (150.1ms)
+  Rendered layouts/_shim.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (7.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 2827ms (Views: 2759.6ms | ActiveRecord: 0.0ms)
